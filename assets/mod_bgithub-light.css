@@ -1,9 +1,0 @@
-.CommitWrapper {box-shadow: 3px 3px 4px #000000;}
-.commit:hover {background: #d5d5d5; color: #ffffff;}
-.commitButton {background-color: #C7C7C7;}
-.commitButton:hover { background-color: #FFFFE5;}
-.issueNo {color: grey;}
-.UserRepo:hover {background: #d5d5d5; color: #ffffff; border-radius: 5px;}
-.GHubLogo {background-image: url('github_logo-light.png');}
-.BGHubTabswitch li:hover {background-color: #000; color: #fff;}
-li.BGHubActitab{color: #fff; background-color: #000}
