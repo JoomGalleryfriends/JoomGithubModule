@@ -3,7 +3,8 @@
  * @version    1.0.0
  * @package    Mod_GitHub
  * @author     Manuel Häusler <tech.spuur@quickline.com>
- * @copyright  2021 Manuel Häusler
+ * @copyright  2013 Ben Tasker . All rights reserved.
+ * @copyright  2021 Manuel Häusler . All rights reserved.
  * @license    GNU General Public License Version 2 oder später; siehe LICENSE.txt
  * @source     https://github.com/bentasker/mod_bgithub_feed
  */

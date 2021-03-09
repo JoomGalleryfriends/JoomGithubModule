@@ -1,6 +1,6 @@
 # mod_GitHub Feed
 
-GitHub Feed is a module for the popular Joomla! Content Management System. It's primary function is to retrieve a list of commits from a given repository and embed them into a Joomla based site. 
+GitHub Feed is a module for the popular Joomla! Content Management System. It's primary function is to retrieve a list of commits from a given repository and embed them into a Joomla based site.
 
 ## Functions included
 
@@ -9,4 +9,4 @@ GitHub Feed is a module for the popular Joomla! Content Management System. It's 
 - Displaying a basic user profile
 
 ## Credits
-This modul is a remake of the module [bentasker/mod_bgithub_feed](https://github.com/bentasker/mod_bgithub_feed) for Joomla! 3.x
+This modul is a remake for Joomla! 3.x of the module [bentasker/mod_bgithub_feed](https://github.com/bentasker/mod_bgithub_feed) for Joomla! 2.5
