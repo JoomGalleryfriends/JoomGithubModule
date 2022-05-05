@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module"	version="3.1"	client="administrator"	method="upgrade">
+	<name>mod_joomgithub</name>
+	<copyright>2020 Manuel Häusler</copyright>
+	<creationDate>February 2021</creationDate>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author>Manuel Häusler</author>
+	<authorEmail>tech.spuur@quickline.com</authorEmail>
+	<authorUrl>https://tech.spuur.ch</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_GITHUB_XML_DESCRIPTION</description>
+
+	<files>
+		<filename module="mod_joomgithub">mod_joomgithub.php</filename>
+		<filename>mod_joomgithub.xml</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_joomgithub.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_joomgithub.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_joomgithub.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_joomgithub.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name='layout'
+					type='modulelayout'
+					default='default'
+					size='10'
+					label="MOD_GITHUB_MODE_LABEL"
+				/>
+				<field name="Owner"
+					type="text"
+					default="BenTasker"
+					size="10"
+					label="MOD_GITHUB_OWNER_LABEL"
+					description="MOD_GITHUB_OWNER_DESC"
+				/>
+				<field
+					name="repo"
+					type="text"
+					default="PHPCredLocker"
+					size="10"
+					label="MOD_GITHUB_REPO_LABEL"
+					description="MOD_GITHUB_REPO_DESC"
+				/>
+				<field type="list"
+					name="CommitImg"
+					default="0"
+					label="MOD_GITHUB_COMMITIMG_LABEL"
+					description="MOD_GITHUB_COMMITIMG_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field type="list"
+				    name="DispCommitter"
+				    default="1"
+				    label="MOD_GITHUB_DISPCOMMITTER_LABEL"
+				    description="MOD_GITHUB_DISPCOMMITTER_DESC">
+				    <option value="0">JNo</option>
+				    <option value="1">JYes</option>
+				</field>
+				<field
+					name="DispRecords"
+					type="text"
+					default="5"
+					size="10"
+					label="MOD_GITHUB_DISPRECORDS_LABEL"
+					description="MOD_GITHUB_DISPRECORDS_DESC"
+				/>
+			</fieldset>
+
+			<fieldset name="Commits" label="Commits">
+				<field
+					name="Branch"
+					type="text"
+					default="master"
+					size="10"
+					label="MOD_GITHUB_BRANCH_LABEL"
+					description="MOD_GITHUB_BRANCH_DESC"
+				/>
+			</fieldset>
+
+			<fieldset name="Issues" label="Issues">
+			  	<field name="IssueLabels"
+					type="text"
+					default=""
+					size="10"
+					label="MOD_GITHUB_ISSUELABELS_LABEL"
+					description="MOD_GITHUB_ISSUELABELS_DESC"
+				/>
+				<field type="list"
+					name="IssueStatus"
+					default="0"
+					label="MOD_GITHUB_ISSUESTATUS_LABEL"
+					description="MOD_GITHUB_ISSUESTATUS_DESC">
+					<option value="open">MOD_GITHUB_OPEN</option>
+					<option value="closed">MOD_GITHUB_CLOSED</option>
+				</field>
+			    <field type="list"
+					name="IssueSort"
+					default="updated"
+					label="MOD_GITHUB_ISSUESORT_LABEL"
+					description="MOD_GITHUB_ISSUESORT_DESC">
+					<option value="created">MOD_GITHUB_CREATED</option>
+					<option value="updated">MOD_GITHUB_UPDATED</option>
+					<option value="comments">MOD_GITHUB_COMMENTS</option>
+				</field>
+				<field type="list"
+					name="IssueOrder"
+					default='desc'
+					label='MOD_GITHUB_ISSUEORDER_LABEL'
+					description='MOD_GITHUB_ISSUEORDER_DESC'>
+					<option value="desc">MOD_GITHUB_DESC</option>
+					<option value="asc">MOD_GITHUB_ASC</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="User" label="User">
+				<field name="JoinedDate"
+					type="text"
+					default="d M Y"
+					size="10"
+					label="MOD_GITHUB_JOINEDDATE_LABEL"
+					description="MOD_GITHUB_JOINEDDATE_DESC"
+				/>
+				<field type="list"
+					name="UserListRepos"
+					default='0'
+					label='MOD_GITHUB_USERLISTREPOS_LABEL'
+					description='MOD_GITHUB_USERLISTREPOS_DESC'>
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="UserRepoFilter"
+					type="text"
+					default=""
+					size="10"
+					label="MOD_GITHUB_USERREPOFILTER_LABEL"
+					description="MOD_GITHUB_USERREPOFILTER_DESC"
+				/>
+				<field name="RepoDate"
+					type="text"
+					default="d M Y"
+					size="10"
+					label="MOD_GITHUB_REPODATE_LABEL"
+					description="MOD_GITHUB_REPODATE_DESC"
+				/>
+			</fieldset>
+
+			<fieldset name="formatting" label="Formatting">
+				<field name="ClssSuffix"
+					type="text"
+					default=""
+					size="10"
+					label="MOD_GITHUB_CLSSSUFFIX_LABEL"
+					description="MOD_GITHUB_CLSSSUFFIX_DESC"
+				/>
+				<field
+					name="DivSize"
+					type="text"
+					default="0"
+					size="10"
+					label="MOD_GITHUB_DIVSIZE_LABEL"
+					description="MOD_GITHUB_DIVSIZE_DESC"
+				/>
+				<field
+					name="DateFormat"
+					type="text"
+					default="d M H:i"
+					size="10"
+					label="MOD_GITHUB_DATEFORMAT_LABEL"
+					description="MOD_GITHUB_DATEFORMAT_DESC"
+				/>
+			</fieldset>
+
+			<fieldset name="Caching" label="MOD_GITHUB_CACHING_LABEL" description="MOD_GITHUB_CACHING_DESC">
+				<field type="list"
+					name="CachingEnabled"
+					default="1"
+					label="MOD_GITHUB_CACHINGENABLED_LABEL"
+					description="MOD_GITHUB_CACHINGENABLED_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="shortcache"
+					type="text"
+					default="30"
+					size="10"
+					label="MOD_GITHUB_SHORTCACHE_LABEL"
+					description="MOD_GITHUB_SHORTCACHE_DESC"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
