@@ -1,6 +1,6 @@
-# mod_GitHub Feed
+# mod_JoomGitHub Feed
 
-GitHub Feed is a module for the popular Joomla! Content Management System. It's primary function is to retrieve a list of commits from a given repository and embed them into a Joomla based site.
+JoomGitHub Feed is a module for the popular Joomla! Content Management System. It's primary function is to retrieve a list of commits from a given repository and embed them into a Joomla based site.
 
 ## Functions included
 

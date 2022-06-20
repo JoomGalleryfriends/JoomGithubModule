@@ -1,7 +1,7 @@
 <?php
 /**
  * @version    1.0.0
- * @package    Mod_GitHub
+ * @package    Mod_JoomGitHub
  * @author     Manuel Häusler <tech.spuur@quickline.com>
  * @copyright  2013 Ben Tasker . All rights reserved.
  * @copyright  2021 Manuel Häusler . All rights reserved.
@@ -19,7 +19,7 @@ $github = new modBGitHubHelper;
 $github->setparams($params);
 
 $document = JFactory::getDocument();
-$document->addStyleSheet("modules/mod_github/assets/mod_github.css");
+$document->addStyleSheet("modules/mod_joomgithub/assets/mod_joomgithub.css");
 
 
 $dateformat    = $params->get('DateFormat');
@@ -31,4 +31,4 @@ $dispCommitter = $params->get('DispCommitter');
 $suffix        = $params->get('ClssSuffix');
 
 
-require JModuleHelper::getLayoutPath('mod_github', 'default');
+require JModuleHelper::getLayoutPath('mod_joomgithub', 'default');

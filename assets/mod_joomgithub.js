@@ -1,6 +1,6 @@
 /**
  * @version    1.0.0
- * @package    Mod_GitHub
+ * @package    Mod_JoomGitHub
  * @author     Manuel Häusler
  * @copyright  2013 Ben Tasker . All rights reserved.
  * @copyright  2021 Manuel Häusler . All rights reserved.

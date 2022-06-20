@@ -1,7 +1,7 @@
 <?php
 /**
  * @version    1.0.0
- * @package    Mod_GitHub
+ * @package    Mod_JoomGitHub
  * @author     Manuel Häusler <tech.spuur@quickline.com>
  * @copyright  2013 Ben Tasker . All rights reserved.
  * @copyright  2021 Manuel Häusler . All rights reserved.
@@ -22,12 +22,12 @@ JHtml::_('behavior.keepalive');
 		if ($layout != '_:default')
 		{
 			// Load the desired layout
-			require JModuleHelper::getLayoutPath('mod_github', $layout );
+			require JModuleHelper::getLayoutPath('mod_joomgithub', $layout );
 		}
 		else
 		{
 			// Default layout is essentially just the other layouts, all in one as tabs
-			$document->addScript("modules/mod_github/assets/mod_github.js");
+			$document->addScript("modules/mod_joomgithub/assets/mod_joomgithub.js");
 	?>
 	<div class='BGHubTabSwitcher'>
 	  <ul class='BGHubTabswitch nav nav-tabs'>
@@ -39,15 +39,15 @@ JHtml::_('behavior.keepalive');
 	<div class="clearfix"></div>
 
 	<div class='BGHubTabContent' id='BGHubCommitsTab'>
-		<?php require JModuleHelper::getLayoutPath('mod_github', 'Commits' ); ?>
+		<?php require JModuleHelper::getLayoutPath('mod_joomgithub', 'Commits' ); ?>
 	</div>
 
 	<div class='BGHubTabContent' id='BGHubIssuesTab' style='display: none;'>
-		<?php require JModuleHelper::getLayoutPath('mod_github', 'Issues' ); ?>
+		<?php require JModuleHelper::getLayoutPath('mod_joomgithub', 'Issues' ); ?>
 	</div>
 
 	<div class='BGHubTabContent' id='BGHubUserTab' style='display: none;'>
-		<?php require JModuleHelper::getLayoutPath('mod_github', 'User' ); ?>
+		<?php require JModuleHelper::getLayoutPath('mod_joomgithub', 'User' ); ?>
 	</div>
 
 	<?php
