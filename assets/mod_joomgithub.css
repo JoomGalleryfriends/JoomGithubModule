@@ -1,9 +1,8 @@
 .BGHubPoweredBy {
 	margin: auto;
 	width: 50%;
-	font-size:
-	x-small; font-style:
-	italic;
+	font-size: x-small;
+	font-style: italic;
 	margin-top: 20px;
 }
 .BGHubPoweredBy a {
@@ -155,7 +154,7 @@ li.BGHubActitab {
 }
 .issuePos {
 	display: inline-block;
-	margin: 0 20px;
+	margin: 0 10px;
 	text-align: center;
 	vertical-align: top;
 }
@@ -174,11 +173,10 @@ li.BGHubActitab {
 	text-decoration: none;
 }
 .issueType {
-	padding: 3px 7px;
-	border-radius: 15px;
-	opacity: 0.9;
+	padding: 0px 7px;
+	line-height: 18px;
+	border-radius: 2em;
 	float: left;
-	min-width: 50px;
 	margin-right: 5px;
 	background-color: #ddd;
 }
@@ -203,8 +201,10 @@ li.BGHubActitab {
 	background-color: #b5e5a3;
 }
 .issueType.bounty {
-	background-color: #5e31ff;
+	background-color: #1D76DB;
 	color: #fff;
+	font-size: 12px;
+	font-weight: 500;
 }
 .commitLink {
 	text-decoration: none;
