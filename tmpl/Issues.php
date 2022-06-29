@@ -1,7 +1,7 @@
 <?php
 /**
  * @version    1.0.0
- * @package    Mod_GitHub
+ * @package    Mod_JoomGitHub
  * @author     Manuel Häusler <tech.spuur@quickline.com>
  * @copyright  2013 Ben Tasker . All rights reserved.
  * @copyright  2021 Manuel Häusler . All rights reserved.
@@ -22,66 +22,71 @@ $X = 0;
 
 echo '<ul class="list-striped">';
 
-foreach ($issues as $issue)
+if ($issues == null)
 {
-
-  if ($X == $dispcount){ break; }
-  $title      = str_replace("'","&apos;",htmlspecialchars($issue->title));
-  $issueno    = $issue->number;
-  $url        = $issue->html_url;
-  $created    = date($dateformat,strtotime($issue->created_at));
-  $status     = $issue->state;
-  $labels     = array();
-  if($issue->labels)
+  echo JText::_('MOD_GITHUB_NOISSUE');
+}
+else
+{
+  foreach ($issues as $issue)
   {
-    foreach ($issue->labels as $label)
+    if ($X == $dispcount){ break; }
+    $title      = str_replace("'","&apos;",htmlspecialchars($issue->title));
+    $issueno    = $issue->number;
+    $url        = $issue->html_url;
+    $created    = date($dateformat,strtotime($issue->created_at));
+    $status     = $issue->state;
+    $labels     = array();
+    if($issue->labels)
     {
-      array_push($labels, $label->name);
+      foreach ($issue->labels as $label)
+      {
+        array_push($labels, $label->name);
+      }
     }
-  }
-  $body       = str_replace("'","&apos;",htmlspecialchars($issue->body));
-  $creator    = $issue->user->login;
-  $creatorurl = "http://github.com/$creator";
+    $body       = str_replace("'","&apos;",htmlspecialchars($issue->body));
+    $creator    = $issue->user->login;
+    $creatorurl = "http://github.com/$creator";
 
-  $gravatar = "<img class='bGitHubGravatar' src='{$issue->user->avatar_url}'>";
+    $gravatar = "<img class='bGitHubGravatar' src='{$issue->user->avatar_url}'>";
 
-  ?>
-  <li class="commit" id="commit<?php echo $X;?>">
-    <div class="indCommitwrap">
-      <?php if ($displayimg):?>
-          <div class='commitGrav'><?php echo $gravatar; ?></div>
-      <?php endif; ?>
+    ?>
+    <li class="commit" id="commit<?php echo $X;?>">
+      <div class="indCommitwrap">
+        <?php if ($displayimg):?>
+            <div class='commitGrav'><?php echo $gravatar; ?></div>
+        <?php endif; ?>
 
-      <div class="commitcontent">
-        <div class="committext" id="CommitText<?php echo $X;?>">
-          <span class='issueNo'>#<?php echo $issueno;?></span>
-          <a class='IssueURL' id='BGitHubIssueUrl<?php echo $X; ?>' href='<?php echo $url; ?>' target='_blank'><?php echo $title; ?></a>
-          <br />
-    	    <div class='issueDets'>
-          	<?php if ($dispCommitter):?>
-          	  by
-              <a class='commitAuthor' target='_blank' href="<?php echo $creatorurl;?>"><?php echo $creator; ?></a>
-          	<?php endif; ?>
-            <span class='CommitDate'><?php echo $created; ?></span>
+        <div class="commitcontent">
+          <div class="committext" id="CommitText<?php echo $X;?>">
+            <span class='issueNo'>#<?php echo $issueno;?></span>
+            <a class='IssueURL' id='BGitHubIssueUrl<?php echo $X; ?>' href='<?php echo $url; ?>' target='_blank'><?php echo $title; ?></a>
+            <br />
+            <div class='issueDets'>
+              <?php if ($dispCommitter):?>
+                by
+                <a class='commitAuthor' target='_blank' href="<?php echo $creatorurl;?>"><?php echo $creator; ?></a>
+              <?php endif; ?>
+              <span class='CommitDate'><?php echo $created; ?></span>
+            </div>
           </div>
         </div>
+
+        <div class='issuePos'>
+          <?php foreach ($labels as $label) : ?>
+            <div class='issueType <?php echo str_replace(" ","",$label); ?>'>
+              <?php echo $label;?>
+            </div>
+          <?php endforeach; ?>
+        </div>
+
+        <div class='issueStatus IssStatus<?php echo $status; ?>'><?php echo $status; ?></div>
       </div>
+    </li>
 
-      <div class='issuePos'>
-        <?php foreach ($labels as $label) : ?>
-          <div class='issueType <?php echo str_replace(" ","",$label); ?>'>
-            <?php echo $label;?>
-          </div>
-        <?php endforeach; ?>
-      </div>
-
-      <div class='issueStatus IssStatus<?php echo $status; ?>'><?php echo $status; ?></div>
-    </div>
-  </li>
-
-  <?php
-
-  $X++;
+    <?php
+    $X++;
+  }
 }
 
 echo '</ul>';

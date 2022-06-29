@@ -1,0 +1,285 @@
+.BGHubPoweredBy {
+	margin: auto;
+	width: 50%;
+	font-size: x-small;
+	font-style: italic;
+	margin-top: 20px;
+}
+.BGHubPoweredBy a {
+	text-decoration: none;
+}
+.GHubLogo {
+	float: left;
+	background-repeat: no-repeat;
+	width: 50px;
+	height: 22px;
+	display: inline-block;
+	padding-top: 5px;
+	background-position: center;
+}
+/* I loathe having to use !important, but Beez overrides the values if you want the module in the content area - correct behaviour but still irritating */
+.BGHubTabswitch {
+	list-style: none;
+	list-style-type: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	margin: auto !important;
+	position: relative; 
+}
+.BGHubTabswitch li {
+	float: left;
+	padding: 8px !important;
+	opacity: 0.6;
+	border: 1px solid transparent;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	cursor: pointer;
+}
+.BGHubTabswitch li:hover {
+	border-radius: 5px; 
+	text-shadow: 0px 0px 0px;
+}
+li.BGHubActitab {
+	opacity: 1;
+	font-weight: bold;
+	border-radius: border-radius: 5px 5px 0px 0px;
+	cursor: default;
+	border: 1px solid #ddd;
+	border-bottom-color: transparent;
+	background-color: #fff;
+}
+.BGHubTabContent {
+	border: 1px solid #ddd;
+	border-top: none;
+	background-color: #fff; 
+}
+.nav-tabs > li {
+    margin-bottom: -2px;
+}
+.GHubUserInfo {
+	width: 100%;
+} 
+.GHubCell {
+	vertical-align: middle;
+	margin: 0px;
+	padding: 5px;
+}
+.GHubCell a {
+	text-shadow: 0px 0px 0px;
+}
+.GHubUserInfo tr {
+	border-collapse: collapse;
+}
+.GHubUserInfo td {
+	border-collapse: collapse;
+}
+.GHubUser {
+	text-align: center;
+}
+.GHubUser a {
+	text-decoration: none;
+}
+.GHubGrav {
+	text-align: center;
+	padding: 0px;
+}
+.GHubBlog {
+	font-style: italic;
+	font-size: x-small;
+	text-align: center;
+}
+.GHubJoined {
+	font-style: italic;
+	font-size: x-small;
+	text-align: center;
+}
+.GHubLocation {
+	font-style: italic;
+	font-size: x-small;
+	text-align: center;
+}
+.GHubCo {
+	font-style: italic;
+	font-size: x-small;
+	text-align: center;
+}
+.GHubContent {
+	font-size: small;
+	text-align: center;
+}
+.GHubBlogNme {
+	word-wrap: break-word;
+}
+
+.UserRepos td {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.UserRepos,
+.UserRepo {
+	border-bottom: 1px solid #ddd;
+}
+.UserRepo td {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	vertical-align: middle;
+}
+.UserRepoNme {
+	float: left;
+	max-width: 80%;
+	padding-left: 5px;
+}
+.repoLang {
+	float: right;
+	padding-right: 5px;
+}
+.UserRepoName a {
+	text-decoration: none;
+}
+.UserRepoName {
+	font-size: larger;
+	display: inline-block;
+	padding-bottom: 15px;
+}
+.UserRepoDesc {
+	font-size: x-small;
+}
+.repoupdDate {
+	font-size: x-small;
+	display: inline-block;
+	margin-top: 10px;
+	font-style: italic;
+}
+.issuePos {
+	display: inline-block;
+	margin: 0 10px;
+	text-align: center;
+	vertical-align: top;
+}
+.issueStatus {
+	float: right;
+	display: inline-block;
+}
+.issueNo {
+	font-style: italic;
+}
+.issueDets {
+	display: inline-block;
+	margin-top: 5px;
+}
+.IssueURL {
+	text-decoration: none;
+}
+.issueType {
+	padding: 0px 7px;
+	line-height: 18px;
+	border-radius: 2em;
+	float: left;
+	margin-right: 5px;
+	background-color: #ddd;
+}
+.issueType.bug {
+	background-color: #fc2929;
+	color: #fff;
+}
+.issueType.enhancement {
+	background-color: #84b6eb;
+}
+.issueType.needsdiscussion {
+	background-color: #ff651a;
+}
+.issueType.needstesting {
+	background-color: #ffc821;
+}
+.issueType.question {
+	background-color: #c91260;
+	color: #fff;
+}
+.issueType.waitingforfeedback {
+	background-color: #b5e5a3;
+}
+.issueType.bounty {
+	background-color: #1D76DB;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 500;
+}
+.commitLink {
+	text-decoration: none;
+}
+.commitTree {
+	text-decoration: none;
+	font-size: smaller;
+}
+.CommitDets {
+	display: inline-block;
+	margin-top: 5px;
+}
+.commitButton {
+	font-weight: bolder;
+	vertical-align: middle;
+	padding: 5px;
+	border-radius: 5px;
+	opacity: 0.9;
+}
+.commitButton:hover {
+	opacity: 1;
+}
+.commitGrav {
+	display: inline-block;
+	float: left;
+}
+.bGitHubGravatar {
+	height: 20px;
+	width: 20px;
+}
+.commitcontent {
+	display: inline-block;
+	padding-left: 5px;
+	max-width: 55%;
+}
+.committext {
+	display: inline-block;
+}
+.commitAuthor {
+	text-decoration: none;
+}
+.CommitDate {
+	font-style: italic;
+	font-size: x-small;
+}
+.commitPos {
+	display: inline-block;
+	float: right;
+	text-align: center;
+	font-size: x-small;
+}
+.indCommitwrap {
+	position: relative;
+	margin-bottom: 5px;
+}
+.commit {
+	list-style: none;
+	padding: 10px;
+}
+.list-striped, .row-striped {
+	margin: 0;
+}
+
+@media screen and (max-device-width: 1000px) {
+
+  div.commitGrav {
+  	display: none;
+  }
+  .commitPos {
+  	font-size: x-small
+  }
+  .issueType {
+  	display: none;
+  }
+  .bGitHubGravatar {
+  	display: none;
+  }
+}
