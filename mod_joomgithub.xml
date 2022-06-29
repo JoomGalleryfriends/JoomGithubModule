@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module"	version="3.1"	client="administrator"	method="upgrade">
 	<name>mod_joomgithub</name>
-	<copyright>2020 Manuel Häusler</copyright>
-	<creationDate>February 2021</creationDate>
+	<copyright>2022 Manuel Häusler</copyright>
+	<creationDate>February 2022</creationDate>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<author>Manuel Häusler</author>
 	<authorEmail>tech.spuur@quickline.com</authorEmail>
 	<authorUrl>https://tech.spuur.ch</authorUrl>
-	<version>1.0.0</version>
+	<version>3.0.0</version>
 	<description>MOD_GITHUB_XML_DESCRIPTION</description>
 
 	<files>
